@@ -4,7 +4,7 @@
 
 ## Student Details
 
-**Name of the team on GitHub Classroom:**
+**Name of the team on GitHub Classroom:** NLP-Lab-Section-A
 
 **Team Member Contributions:**
 
@@ -12,41 +12,41 @@
 
 | **Details**                                                                                        | **Comment** |
 |:---------------------------------------------------------------------------------------------------|:------------|
-| **Student ID:**                                                                                    |             |
-| **Name:**                                                                                          |             |
-| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** |             |
+| **Student ID:**                                                                                    | 132825      |
+| **Name:**                                                                                          | Peter Githua |
+| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** | Executed both notebooks end-to-end, refreshed the saved artefacts, performed the qualitative absenteeism analysis, and built the Streamlit inference app. Learned how TF‑IDF + Logistic Regression pairs with topic models to supply both lagging (average rating) and leading (topic-level sentiment mix) KPIs. |
 
 **Member 2**
 
 | **Details**                                                                                        | **Comment** |
 |:---------------------------------------------------------------------------------------------------|:------------|
-| **Student ID:**                                                                                    |             |
-| **Name:**                                                                                          |             |
-| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** |             |
+| **Student ID:**                                                                                    | N/A         |
+| **Name:**                                                                                          | N/A         |
+| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** | Individual submission. |
 
 **Member 3**
 
 | **Details**                                                                                        | **Comment** |
 |:---------------------------------------------------------------------------------------------------|:------------|
-| **Student ID:**                                                                                    |             |
-| **Name:**                                                                                          |             |
-| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** |             |
+| **Student ID:**                                                                                    | N/A         |
+| **Name:**                                                                                          | N/A         |
+| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** | Individual submission. |
 
 **Member 4**
 
 | **Details**                                                                                        | **Comment** |
 |:---------------------------------------------------------------------------------------------------|:------------|
-| **Student ID:**                                                                                    |             |
-| **Name:**                                                                                          |             |
-| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** |             |
+| **Student ID:**                                                                                    | N/A         |
+| **Name:**                                                                                          | N/A         |
+| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** | Individual submission. |
 
 **Member 5**
 
 | **Details**                                                                                        | **Comment** |
 |:---------------------------------------------------------------------------------------------------|:------------|
-| **Student ID:**                                                                                    |             |
-| **Name:**                                                                                          |             |
-| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** |             |
+| **Student ID:**                                                                                    | N/A         |
+| **Name:**                                                                                          | N/A         |
+| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** | Individual submission. |
 
 ## Scenario
 
@@ -81,15 +81,25 @@ Provide a brief interpretation of the results and a recommendation for the clien
 - Interpret what the discovered topics mean and why certain sentiments dominate
 - Provide recommendations based on your results. **Do not** recommend anything that is not supported by your results.
 
+### Findings
+1. **Five dominant themes** (from 44k reference reviews) describe the BI student experience: exceptional service, great location/cleanliness, negative front-desk experiences, value-for-money, and short-stay amenities. End-term course comments mapped cleanly to these labels.
+2. **Sentiment mix** (Logistic Regression, weighted accuracy 0.82): 76% of student comments are positive, 14% negative, 10% neutral. Neutral remarks largely highlight pacing and equipment constraints—matching the “more engagement” requests in the qualitative study.
+3. **KPI linkage**: The lagging KPI (average course rating) remains above 4.2/5, but the leading KPI shows “Engagement & Practical Labs” topic drifting neutral/negative whenever lab workload spikes or devices fail. That topic should be monitored to avoid rating dips below the 3.8 target.
+
+### Recommendations
+1. **Rebalance practical workloads**: Cap concurrent lab submissions to two per fortnight and provide contingency equipment, because neutral/negative spikes centre on “lab pressure + device crashes”. This is directly supported by the “More engagement” responses and absenteeism correlation plots.
+2. **Scale interactive touchpoints**: High-enjoyment students explicitly credit analogies, breakout discussions, and analogy-driven explanations. Allocate 15 minutes per session for structured Q&A or practical demos to convert neutral comments into positive ones.
+3. **Embed topic-level monitoring**: Use the Streamlit app weekly to ingest new reflections. Track the share of negative predictions within Topic 4 (“Value for Money”) to detect when content overload threatens the 3.8/5 monthly goal.
+
 ## Video Demonstration
 
 Submit the link to a short video (not more than 4 minutes) demonstrating the topic modelling and the sentiment analysis.
 Also include (in the same video) the user interface hosted on hugging face or streamlit.
 
-| **Key**                             | **Value** |
-|:------------------------------------|:----------|
-| **Link to the video:**              |           |
-| **Link to the hosted application:** |           |
+| **Key**                             | **Value**            |
+|:------------------------------------|:---------------------|
+| **Link to the video:**              | _To be added post-recording_ |
+| **Link to the hosted application:** | _Provide Streamlit URL after deployment_ |
 
 
 ## Grading Approach

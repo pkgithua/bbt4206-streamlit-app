@@ -87,13 +87,37 @@ For the official lecturer instructions, refer to [setup_instructions.md](setup_i
 - Correlations between absenteeism, overall rating, and punctuality perception
 - Deep dive on “more engagement” recommendations (themes + expectations)
 
-Use these artefacts when writing up the recommendation section or populating the submission template in `lab_submission_instructions.md`.
+### Notebook Execution (refreshed 17-Nov-2025)
+- `1_topic_modeling_using_LDA.ipynb`
+  - 44,007 English reviews → five coherent topics.
+  - LDA perplexity ≈ **508** and topic labels stored in `model/topic_labels.json`.
+- `2_sentiment_analysis.ipynb`
+  - TF-IDF (1–3 grams, 5k features) + Logistic Regression.
+  - Weighted accuracy **0.82** / macro F1 **0.56** (class imbalance noted).
+  - Artefacts exported to `model/` for reuse.
 
-## Lab Submission Instructions
+> Both notebooks were executed via `jupyter nbconvert --execute ...` so the cell outputs stored in GitHub match the saved artefacts.
 
+### Interactive Streamlit Demo
+- Source file: `streamlit_app.py`
+- Local run:
+  ```powershell
+  .\.venv311\Scripts\activate
+  streamlit run streamlit_app.py
+  ```
+- Deploying to Streamlit Community Cloud:
+  1. Sign in at [https://share.streamlit.io](https://share.streamlit.io).
+  2. Click **New app** → `BI-course/BBT4206-lab-on-NLP-d1`, branch `main`, file `streamlit_app.py`.
+  3. (Optional) Under Advanced settings set `PYTHON_VERSION` to 3.11.
+  4. Deploy; the service reads `requirements.txt`, downloads the models in `model/`, and exposes the UI.
+
+The app ingests one textual evaluation, infers the dominant topic (with keywords) and sentiment probabilities—so the leading KPI (topic-level sentiment mix) can be monitored alongside the lagging KPI (mean rating).
+
+### Submission Template Reminder
 See [lab_submission_instructions.md](lab_submission_instructions.md) for the formal template (team info, video link, hosted UI link, etc.). This repo already contains:
 - Topic & sentiment modelling notebooks
 - Trained artefacts under `model/`
 - The qualitative analysis report + visuals under `analysis/`
+- Streamlit inference app (`streamlit_app.py`)
 
-Update those sections with your team’s details, interpretation, recommendations, video demo, and hosted interface link before the final submission.
+Update the submission file with your details, interpretation, recommendations, recorded video link, and the deployed Streamlit URL before submitting.
