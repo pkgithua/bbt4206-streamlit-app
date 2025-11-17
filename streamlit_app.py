@@ -15,9 +15,12 @@ from nltk.stem import PorterStemmer
 import nltk
 
 # Ensure required NLTK resources are available (safe to call multiple times)
-for resource in ["punkt", "stopwords"]:
+for resource in ["punkt", "punkt_tab", "stopwords"]:
     try:
-        nltk.data.find(f"tokenizers/{resource}")
+        if resource == "punkt_tab":
+            nltk.data.find("tokenizers/punkt_tab/english")
+        else:
+            nltk.data.find(f"tokenizers/{resource}")
     except LookupError:
         nltk.download(resource, quiet=True)
 
