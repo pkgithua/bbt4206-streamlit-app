@@ -1,0 +1,8 @@
+================================================================================
+COURSE EVALUATION DATA ANALYSIS - SUMMARY REPORT
+================================================================================
+
+Total Responses: 130
+Class Groups: Group A, Group B, Group C
+Average Course Rating: 4.20
+Average Absenteeism: 15.7%
