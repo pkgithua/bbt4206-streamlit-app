@@ -99,7 +99,7 @@ Also include (in the same video) the user interface hosted on hugging face or st
 | **Key**                             | **Value**            |
 |:------------------------------------|:---------------------|
 | **Link to the video:**              | _To be added post-recording_ |
-| **Link to the hosted application:** | _Provide Streamlit URL after deployment_ |
+| **Link to the hosted application:** | https://bbt4206-app-app-wiknygrjcuqvhkwzqukkzr.streamlit.app/ |
 
 
 ## Grading Approach
